@@ -10,7 +10,7 @@ const todoForm = document.getElementById("todo-Form") as HTMLFormElement;
 const errorMessage = document.getElementById("errorMessage") as HTMLElement;
 const todosDiv = document.getElementById("todo-List") as HTMLElement;
 
-// Händelselyssnare för att lägga till uppgifter att göra
+// Händelselyssnare för att lägga till uppgifter
 todoForm.addEventListener("submit", function (event: Event) {
     event.preventDefault();
 
@@ -32,7 +32,7 @@ todoForm.addEventListener("submit", function (event: Event) {
     }
 });
 
-// Funktion för att visa alla uppgifter
+// Funktion för att visa uppgifter
 function displayTodos(): void {
     const todos: Todo[] = todoList.getTodos();
     todosDiv.innerHTML = ""; // Rensa tidigare visade uppgifter
@@ -43,7 +43,7 @@ function displayTodos(): void {
     todos.forEach((todo, index) => {
         const todoElement = document.createElement("div");
         todoElement.textContent = `${todo.task}, Prio: ${todo.priority}`;
-        // Skapa en knapp för att markera som slutförd
+        // Skapa en knapp för att markera uppgift som slutförd
         const completeButton = document.createElement("button");
         completeButton.textContent = "Slutförd";
         completeButton.addEventListener("click", function () {
@@ -56,10 +56,10 @@ function displayTodos(): void {
             todoElement.classList.add("completed");
         }
 
-        todoElement.appendChild(completeButton); // Lägg till knappen "Slutförd" i todoElementet
-        todosDiv.appendChild(todoElement); // Lägg till todoElementet i div
+        todoElement.appendChild(completeButton); // Lägg till knappen "Slutförd" till todoElement
+        todosDiv.appendChild(todoElement); // Lägg till todoElementet i todosDiv
     });
 }
 
-// Visa alla uppgifter vid sidladdning
+// Visa de uppgifter som finns vid sidladdning
 displayTodos();
