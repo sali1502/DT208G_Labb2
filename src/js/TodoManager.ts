@@ -13,7 +13,7 @@ export class TodoList {
     // Array med uppgifter att utföra
     private todos: Todo[] = [];
 
-    // Konstruktor som laddar uppgifter från LocalStorage vid skapande av ett nytt objekt
+    // Konstruktor som laddar uppgifter från LocalStorage vid skapande av ett nytt TodoList-objekt
     constructor() {
         this.loadFromLocalStorage();
     }
