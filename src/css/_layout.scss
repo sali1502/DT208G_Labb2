@@ -45,6 +45,7 @@ body {
 #todo-List {
     background-color: base.$primary-bg;
     margin: 0 auto 0 auto;
+    font-size: 1.5em;
     text-align: center;
     max-width: 700px;
     padding-top: 4vh;
@@ -55,7 +56,7 @@ body {
 
 h1 {
     font: 100% base.$font-stack;
-    font-size: 2em;
+    font-size: 2.5em;
     margin-top: 6vh;
     margin-bottom: 4vh;
     color: base.$primary-heading;
@@ -64,7 +65,7 @@ h1 {
 
 h2 {
     font: 100% base.$font-stack;
-    font-size: 1.5em;
+    font-size: 2em;
     margin-top: 6vh;
     margin-bottom: 4vh;
     color: base.$primary-heading;
@@ -103,11 +104,13 @@ button {
     margin-top: 1vh;
     margin-bottom: 1vh;
     margin-left: 0.5vw;
+    border-radius: 5px;
 }
 
 #errorMessage {
     margin-top: 2vh;
     color: base.$errorMsg;
+    font-size: 1em;
 }
 
 .completed {

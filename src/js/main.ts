@@ -42,7 +42,7 @@ function displayTodos(): void {
 
     todos.forEach((todo, index) => {
         const todoElement = document.createElement("div");
-        todoElement.textContent = `${todo.task}, Prio: ${todo.priority}`;
+        todoElement.textContent = `${todo.task}`;
         // Skapa en knapp för att markera uppgift som slutförd
         const completeButton = document.createElement("button");
         completeButton.textContent = "Slutförd";
