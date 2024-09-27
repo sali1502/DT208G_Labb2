@@ -1,0 +1,40 @@
+<!-- DT208G TypeScript, Moment 2. Åsa Lindskog sali1502@student.miun.se  -->
+
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.scss">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="grid-container">
+
+        <h1>Att göra lista</h1>
+
+        <!-- Formulär för att lägga till uppgifter -->
+        <div class="todo-Form">
+            <form id="todo-Form">
+                <input type="text" id="task" placeholder="Lägg till en uppgift här..."><br>
+                <input type="number" id="priority" placeholder="Prio (1-3)">
+                <button type="submit">Lägg till</button>
+            </form>
+        </div>
+
+        <div id="errorMessage"></div>
+
+        <h2>Uppgifter</h2>
+
+        <ul id="todo-List"></ul>
+
+        <script src="./js/main.ts" type="module"></script>
+
+    </div>
+</body>
+
+</html>

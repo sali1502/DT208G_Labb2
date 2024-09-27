@@ -1,0 +1,116 @@
+/* DT208G TypeScript, Moment 2. Åsa Lindskog sali1502@student.miun.se */
+
+@use 'base';
+
+* {
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 2fr;
+    grid-gap: 0px;
+    background-color: base.$primary-bg;
+    margin-top: 20vh;
+    margin: 0 auto 0 auto;
+    opacity: 0.8;
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    font: 100% base.$font-stack;
+    background-color: base.$primary-bg;
+    font-size: 0.9em;
+    text-align: center;
+    margin: 0 auto 0 auto;
+    height: 100%;
+    width: 100%;
+}
+
+.todo-Form {
+    background-color: base.$dark-green;
+    margin: 0 auto 0 auto;
+    max-width: 700px;
+    padding-top: 4vh;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+}
+
+#todo-List {
+    background-color: base.$primary-bg;
+    margin: 0 auto 0 auto;
+    text-align: center;
+    max-width: 700px;
+    padding-top: 4vh;
+    border-radius: 4px;
+    height: 100%;
+    width: 100%;
+}
+
+h1 {
+    font: 100% base.$font-stack;
+    font-size: 2em;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    color: base.$primary-heading;
+    text-align: center;
+}
+
+h2 {
+    font: 100% base.$font-stack;
+    font-size: 1.5em;
+    margin-top: 6vh;
+    margin-bottom: 4vh;
+    color: base.$primary-heading;
+    text-align: center;
+}
+
+p {
+    margin-top: 2vh;
+    font: 100% base.$font-stack;
+    font-size: 0.8em;
+    line-height: 1.5em;
+    color: base.$primary-text;
+    text-align: left;
+}
+
+#todo-Form {
+    color: base.$white;
+    text-align: left;
+    font-size: 0.8em;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    height: 100%;
+    width: 100%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 5px;
+    border-radius: 4px;
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+}
+
+button {
+    margin-top: 1vh;
+    margin-bottom: 1vh;
+    margin-left: 0.5vw;
+}
+
+#errorMessage {
+    margin-top: 2vh;
+    color: base.$errorMsg;
+}
+
+.completed {
+    text-decoration: line-through;
+    color: base.$completed;
+}
