@@ -29,7 +29,37 @@ todoForm.addEventListener("submit", function (event: Event) {
     } else {
         // Om tillägget misslyckas, visa felmeddelande på skärmen
         errorMessage.textContent = result.message;
-
     }
 });
 
+// Funktion för att visa alla uppgifter
+function displayTodos(): void {
+    const todos: Todo[] = todoList.getTodos();
+    todosDiv.innerHTML = ""; // Rensa tidigare visade uppgifter
+
+    // Sordera uppgifter efter prioritet
+    todos.sort((a, b) => a.priority - b.priority);
+
+    todos.forEach((todo, index) => {
+        const todoElement = document.createElement("div");
+        todoElement.textContent = `${todo.task}, Prio: ${todo.priority}`;
+        // Skapa en knapp för att markera som slutförd
+        const completeButton = document.createElement("button");
+        completeButton.textContent = "Slutförd";
+        completeButton.addEventListener("click", function () {
+            todoList.markTodoCompleted(index); // Markera uppgiften som slutförd
+            displayTodos(); // Uppdatera todo-listan
+        });
+
+        // Om uppgiften är slutförd, markera den visuellt
+        if (todo.completed) {
+            todoElement.classList.add("completed");
+        }
+
+        todoElement.appendChild(completeButton); // Lägg till knappen "Slutförd" i todoElementet
+        todosDiv.appendChild(todoElement); // Lägg till todoElementet i div
+    });
+}
+
+// Visa alla uppgifter vid sidladdning
+displayTodos();
